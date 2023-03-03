@@ -23,7 +23,7 @@ public class CreateTable {
 	public static void createEmployeeTable(Connection connection){
 		
 		PreparedStatement pStmt = null;
-		String createSQL = "CREATE TABLE EMPLOYEE(EMP_ID INT PRIMARY KEY, EMP_NAME VARCHAR(255), EMP_PASSWORD VARCHAR(255));";
+		String createSQL = "CREATE TABLE EMPLOYEE(EMP_ID INT PRIMARY KEY, EMP_FNAME VARCHAR(255), EMP_LNAME VARCHAR(255), EMP_PASSWORD VARCHAR(255), EMP_WEX INT);";
 		try{
 			pStmt = connection.prepareStatement(createSQL);
 			pStmt.execute();
@@ -31,7 +31,5 @@ public class CreateTable {
 		}catch(Exception e){
 			e.printStackTrace();
 		}		
-	}	
-	
- // student teacher and operations
+	}
 }
